@@ -1,0 +1,17 @@
+$black: #000000;
+$lightblue: #e3f7f4;
+
+.main-section {
+  border: 1px solid $black;
+  background-color: $lightblue;
+  padding: 10px;
+  width: 1110px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.left-offset {
+  margin-left: 15px;
+}
