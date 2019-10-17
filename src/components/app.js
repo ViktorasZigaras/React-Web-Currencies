@@ -1,11 +1,7 @@
 import React, {PureComponent} from 'react';
 import './app.scss';
-import {Container, Row, Col} from 'reactstrap';
-import FondList from './fondList/fondList.js';
-import FondInfo from './fondInfo/fondInfo.js';
-import Purchases from './purchases/purchases.js';
-import Controls from './controls/controls.js';
-import FileHandling from './fileHandling/fileHandling.js';
+import {Container, Col} from 'reactstrap';
+import List from './list/list.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends PureComponent {
@@ -17,29 +13,11 @@ class App extends PureComponent {
   render() {
     return (
       <Container>
-        <div className="main-section">
-          <Row>
-            <div className="left-offset">
-              <Row>
-                <Col>
-                  <Row>
-                    <FondList/>
-                    <FondInfo/>
-                  </Row>
-                  <Row>
-                    <Purchases/>
-                  </Row> 
-                </Col>
-              </Row>
-              <Row>
-                <FileHandling/>
-              </Row>
-            </div>
-            <div className="left-offset">
-              <Controls/>
-            </div>
-          </Row>
-        </div>
+        <div className="main-section left-offset">
+          <Col>
+            <List/>
+          </Col>
+         </div>
       </Container>
     );
   } 

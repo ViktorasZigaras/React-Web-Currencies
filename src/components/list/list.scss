@@ -3,14 +3,15 @@ $black: #000000;
 $cyan: #b4f7f6;
 $lightorange: #f9e8c5;
 
-.purchase-display-section {
-    width: 825px;
-    height: 300px;
+.list-display-section {
+    width: 500px;
+    height: 146px;
     overflow-y: auto;
     background-color: $lightblue;
     border: 1px solid $black;
     margin-left: 15px;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
   
 .table-mix {
@@ -35,4 +36,12 @@ $lightorange: #f9e8c5;
   
 .cell-mix-header:hover {
     background-color: $lightorange;
+}
+
+.left {
+    margin-left: 15px;
+}
+
+.height {
+    height: 35px;
 }

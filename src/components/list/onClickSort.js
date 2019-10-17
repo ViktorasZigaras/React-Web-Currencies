@@ -1,17 +1,19 @@
 //imports
+// @ts-check
 
-export default function onFondClickHandler(field, parent) {
+/**@param {string} field @param {Object} parent*/
+export default function onClickSortHandler(field, parent) {
+  /**@type string*/
   let sortDirection = 'asc';
+  /**@type number*/
   let direction = 1;
   if (parent.state.lastSortColumn === field && parent.state.sortDirection === 'asc') {
     sortDirection = 'desc';
     direction = -1;
   }
-  if (field === 'date') {parent.props.selectedFund.entries.sort(
+  
+  parent.props.list.sort(
+    /**@param {Object} a @param {Object} b*/
     (a, b) => (a[field] > b[field]) ? direction : -direction);
-  }
-  else {parent.props.selectedFund.entries.sort(
-    (a, b) => (Number(a[field]) > Number(b[field])) ? direction : -direction);
-  }
   parent.setState({lastSortColumn: field, sortDirection: sortDirection});
 }
