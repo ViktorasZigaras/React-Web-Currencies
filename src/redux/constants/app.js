@@ -1,7 +1,7 @@
 // @ts-check
-/**@type string*/
+/** @type {string} */
 export const SET_LIST = 'SET_LIST';
-/**@type string*/
+/** @type {string} */
 export const SET_UPDATED = 'SET_UPDATED';
-/**@type string*/
+/** @type {string} */
 export const SET_SPINNER = 'SET_SPINNER';

@@ -1,17 +1,19 @@
 import React from 'react';
-import './app.scss';
-import {Container, Col} from 'reactstrap';
-import List from './list/list';
+import { Container, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.scss';
+import List from './list/list';
 
-export default function App() {
+const App = (/*props*/) => {
   return (
     <Container>
       <div className="main-section left-offset">
         <Col>
-          <List/>
+          <List />
         </Col>
-       </div>
+      </div>
     </Container>
   );
 }
+
+export default App;
