@@ -2,10 +2,10 @@
 
 import React, {PureComponent} from 'react';
 import './list.scss';
-import {connect} from "react-redux";
-import onClickSort from './onClickSort.js';
-import onDataFetch from './onDataFetch.js';
-import * as Actions from '../../actions/index.js';
+import {connect} from 'react-redux';
+import onClickSort from './onClickSort';
+import onDataFetch from './onDataFetch';
+import Actions from '../../redux/actions/index';
 import {Spinner, Row} from 'reactstrap';
 
 class ListView extends PureComponent {
@@ -51,15 +51,12 @@ class ListView extends PureComponent {
       if (list) {
         /**@type number*/
         let i = 0;
-        /**@type string*/
-        let symbol;
         list.forEach(/**@param {Object} entry*/(entry) => { 
           i++;
-          symbol = entry.symbol;
           listView.push(
             <div key={i} className="row-mix">
               <div className="cell-mix">{entry.code}</div>
-              <div className="cell-mix">{symbol}</div>
+              <div className="cell-mix">{entry.symbol}</div>
               <div className="cell-mix">{entry.rate}</div>
               <div className="cell-mix">{entry.description}</div>
             </div>
@@ -91,8 +88,8 @@ class ListView extends PureComponent {
 /**@param {Object} dispatch*/
 function mapDispatchToProps(dispatch) {
   return {
-    /**@type Object*/ setList: /**@param {any[]} item*/ item => dispatch(Actions.setList(item)),
-    /**@type Object*/ setUpdated: /**@param {string} item*/ item => dispatch(Actions.setUpdated(item)),
+    /**@type Object*/ setList: /**@param {any[]} item*/ (item) => dispatch(Actions.setList(item)),
+    /**@type Object*/ setUpdated: /**@param {string} item*/ (item) => dispatch(Actions.setUpdated(item)),
     /**@type Object*/ setSpinner: /**@param {boolean} item*/ (item) => dispatch(Actions.setSpinner(item))
   }
 }
@@ -106,5 +103,4 @@ const mapStateToProps = state => {
   }
 };
 
-const List = connect(mapStateToProps, mapDispatchToProps)(ListView);
-export default List;
+export default connect(mapStateToProps, mapDispatchToProps)(ListView);

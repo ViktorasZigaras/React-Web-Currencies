@@ -1,4 +1,4 @@
-import * as Constants from "../constants/action-types.js";
+import Constants from "../constants/index";
 
 export function setList(payload) {return {type: Constants.SET_LIST, payload}};
 export function setUpdated(payload) {return {type: Constants.SET_UPDATED, payload}};
