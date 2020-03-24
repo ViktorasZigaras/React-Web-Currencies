@@ -1,7 +1,7 @@
 
 ## This is an instruction on how to use this web application:
 
-**1.** download files from this git repository: https://github.com/ViktorasZigaras/React-Advanced.
+**1.** download files from this git repository.
 
 **2.** install libraries with **npm install**.
 
