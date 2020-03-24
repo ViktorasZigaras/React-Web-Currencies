@@ -13,4 +13,4 @@ The only interaction you can do with this app is to sort any table column by cli
 
 This App uses a bitcoin API at https://api.coindesk.com/v1/bpi/currentprice.json, should there be connectivity issues or processing errors a pop-up window will be displayed.
 
-**An example can be seen in:** https://github.com/ViktorasZigaras/React-Web-Stock-Analysis/blob/master/Screenshot%20(2).png
+**An example can be seen in:** https://github.com/ViktorasZigaras/React-Web-Currencies/blob/master/Screenshot.png
