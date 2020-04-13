@@ -156,3 +156,16 @@ test(
 //         ).toBe( 1 ) 
 //     } 
 // )
+
+import Enzyme, { shallow } from 'enzyme';
+import App from './components';
+import React, { PureComponent } from 'react';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() })
+describe('Load App', () => {
+    it('should render correctly i mode', () => {
+      const component = shallow(<App />);
+      expect(component).toMatchSnapshot();
+    });
+});
